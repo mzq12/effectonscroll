@@ -1,0 +1,24 @@
+[data-effect] {
+    @for $i from 1 through 60 {
+
+        body[data-effect-duration='#{$i * 50}'] &,
+        &[data-effect][data-effect-duration='#{$i * 50}'] {
+            transition-duration: #{$i * 50}ms;
+        }
+
+        body[data-effect-delay='#{$i * 50}'] &,
+        &[data-effect][data-effect-delay='#{$i * 50}'] {
+            transition-delay: 0s;
+
+            &.animated {
+                transition-delay: #{$i * 50}ms;
+            }
+        }
+    }
+}
+
+[data-effect] {
+    &.animated {
+        pointer-events: auto;
+    }
+}

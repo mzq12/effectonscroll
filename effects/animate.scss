@@ -1,0 +1,19 @@
+$effect-distance: 100px !default;
+
+[data-effect^='fade'] {
+    opacity: 0;
+    transition-property: opacity, transform;
+
+    &.animated {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+[data-effect='fade-up'] {
+    transform: translate3d(0, $effect-distance, 0);
+}
+
+[data-effect='fade-right'] {
+    transform: translate3d(-$effect-distance, 0, 0);
+}
