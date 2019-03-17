@@ -4,6 +4,7 @@ import calcPosition from './calculateposition.js'
 import scroll from './scroll.js'
 import throttle from 'lodash/throttle.js'
 import deboundce from 'lodash/debounce.js'
+import observe from './observe.js'
 import {
     SCROLLIN,
     SCROLLOUT
@@ -12,8 +13,15 @@ let Options = {
     offset: 120,
     easing: 'ease',
     duration: 400,
-    in: null,
-    out: null
+    in: function(){
+        return false
+    },
+    out: function(){
+        return false
+    },
+    observe: function(){
+        return false
+    }
 }
 const throttleDelay = 90
 
@@ -45,6 +53,10 @@ const init = function (settings) {
         Options.out(data.detail)
     }, true)
     initScroll()
+    observe(function(addedNodes){
+        initScroll()
+        Options.observe(addedNodes)
+    })
 }
 export default {
     init
