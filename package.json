@@ -18,7 +18,8 @@
     "lodash": "^4.17.11",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
-    "mobile-detect": "^1.4.3"
+    "mobile-detect": "^1.4.3",
+    "rollup": "^1.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
