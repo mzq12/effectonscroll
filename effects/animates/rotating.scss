@@ -1,0 +1,121 @@
+@keyframes rotateIn {
+    from {
+        transform-origin: center;
+        transform: rotate3d(0, 0, 1, -200deg);
+        opacity: 0;
+    }
+
+    to {
+        transform-origin: center;
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateInDownLeft {
+    from {
+        transform-origin: left bottom;
+        transform: rotate3d(0, 0, 1, -45deg);
+        opacity: 0;
+    }
+
+    to {
+        transform-origin: left bottom;
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateInDownRight {
+    from {
+        transform-origin: right bottom;
+        transform: rotate3d(0, 0, 1, 45deg);
+        opacity: 0;
+    }
+
+    to {
+        transform-origin: right bottom;
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateInUpLeft {
+    from {
+        transform-origin: left bottom;
+        transform: rotate3d(0, 0, 1, 45deg);
+        opacity: 0;
+    }
+
+    to {
+        transform-origin: left bottom;
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateInUpRight {
+    from {
+        transform-origin: right bottom;
+        transform: rotate3d(0, 0, 1, -90deg);
+        opacity: 0;
+    }
+
+    to {
+        transform-origin: right bottom;
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+
+
+[data-effect='rotate-in'] {
+    opacity: 0;
+
+    &.animated {
+        opacity: 1;
+        animation-duration: 0.75s;
+        animation-name: rotateIn;
+    }
+}
+
+[data-effect='rotate-in-down-left'] {
+    opacity: 0;
+
+    &.animated {
+        opacity: 1;
+        animation-duration: 0.75s;
+        animation-name: rotateInDownLeft;
+    }
+}
+
+[data-effect='rotate-in-down-right'] {
+    opacity: 0;
+
+    &.animated {
+        opacity: 1;
+        animation-duration: 0.75s;
+        animation-name: rotateInDownRight;
+    }
+}
+
+[data-effect='rotate-in-up-left'] {
+    opacity: 0;
+
+    &.animated {
+        opacity: 1;
+        animation-duration: 0.75s;
+        animation-name: rotateInUpLeft;
+    }
+}
+
+[data-effect='rotate-in-up-right'] {
+    opacity: 0;
+
+    &.animated {
+        opacity: 1;
+        animation-duration: 0.75s;
+        animation-name: rotateInUpRight;
+    }
+}
