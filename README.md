@@ -26,10 +26,10 @@
     <script src="/dist/effect.js"></script>
     <script>
         EFFECT.init({
-            in: function (node) {
+            in: function (node) { // 每次节点进入视口时触发
                 console.log(node)
             },
-            out: function (node) {
+            out: function (node) { // 每次节点离开视口时触发
                 console.log(node)
             }
         })
